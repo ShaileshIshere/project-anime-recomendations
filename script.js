@@ -42,33 +42,33 @@ function loadingAnimation() {
     let h5Timer = document.querySelector("#line1-part1 h5");
     let timer = gsap.timeline();
 
-    // timer.from(".line h1", {
-    //     y: 150,
-    //     stagger: 0.25,
-    //     duration: 0.6,
-    //     delay: 0.5
-    // });
-    // timer.from("#line1-part1", {
-    //     opacity: 0,
-    //     onStart: function() {
-    //         let counter = 0;
-    //         setInterval(function() {
-    //             if(counter < 100)
-    //                 h5Timer.innerHTML = counter++;
-    //             else
-    //                 h5Timer.innerHTML = counter;
-    //         }, 33);
-    //     }
-    // });
-    // timer.to(".line h2", {
-    //     animationName: "nowAnimation",
-    //     opacity: 1
-    // });
-    // timer.to("#loader", {
-    //     opacity: 0,
-    //     duration: 0.2,
-    //     delay: 3
-    // });
+    timer.from(".line h1", {
+        y: 150,
+        stagger: 0.25,
+        duration: 0.6,
+        delay: 0.5
+    });
+    timer.from("#line1-part1", {
+        opacity: 0,
+        onStart: function() {
+            let counter = 0;
+            setInterval(function() {
+                if(counter < 100)
+                    h5Timer.innerHTML = counter++;
+                else
+                    h5Timer.innerHTML = counter;
+            }, 33);
+        }
+    });
+    timer.to(".line h2", {
+        animationName: "nowAnimation",
+        opacity: 1
+    });
+    timer.to("#loader", {
+        opacity: 0,
+        duration: 0.2,
+        delay: 3
+    });
     timer.from("#page1", {
         opacity: 1,
         y: 1600,
