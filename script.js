@@ -69,10 +69,10 @@ function loadingAnimation() {
         duration: 0.2,
         delay: 3
     });
-    timer.from("#page1", {
+    timer.from("#main", {
         opacity: 1,
-        y: 1600,
-        duration: 0.5,
+        y: 1200,
+        duration: 1,
         ease: Power4
     });
     timer.to("#loader", {
@@ -80,26 +80,31 @@ function loadingAnimation() {
     });
     timer.from("#nav", {
         opacity: 0,
-        delay: 0.5
+        // delay: 0.2
     });
     timer.from("#hero1 h1,#hero2 h1,#hero3 h2,#hero3 h1,#hero4 h1", {
-    y: 140,
+    y: 120,
     stagger: 0.2,
     });
 }
 function cursorAnimation() {
     // mouse cursor changed to circlular structure that follows our cursor
-    // document.addEventListener("mousemove", function (dets) {
-    //     gsap.to("#crsr", {
-    //       left: dets.x,
-    //       top: dets.y,
-    //     });
-    // });
-    Shery.mouseFollower({
-        skew: true,
-        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-        duration: 1,
-      });
+    const cursorCircle = document.querySelector("#crsr");
+    window.addEventListener("mousemove", function (dets) {
+        // gsap.to("#crsr", {
+        //   left: dets.x,
+        //   top: dets.y,
+        // });
+        
+        cursorCircle.style.top = dets.pageY + 'px';
+        cursorCircle.style.left = dets.pageX + 'px';
+    });
+    // Shery.mouseFollower({
+    //     skew: true,
+    //     // ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    //     ease: "ease-in",
+    //     duration: 1,
+    //   });
     
     // nav bar magnet effect
     Shery.makeMagnet("#nav-part2 h4");
@@ -109,7 +114,7 @@ function cursorAnimation() {
     let video = document.querySelector("#video-container video");
     videoContainer.addEventListener("mouseenter", function() {
         videoContainer.addEventListener("mousemove", function(dets) {
-            gsap.to(".mousefollower", {
+            gsap.to("#crsr", {
                 opacity: 0,
             })
             gsap.to("#video-cursor", {
@@ -119,12 +124,12 @@ function cursorAnimation() {
         })
     })
     videoContainer.addEventListener("mouseleave", function() {
-        gsap.to(".mousefollower", {
+        gsap.to("#crsr", {
             opacity: 1,
         })
         gsap.to("#video-cursor", {
-            top: "-15%",
-            left: "70%",
+            top: "-10%",
+            left: "80%",
         })
     })
     let flag = 0
@@ -167,7 +172,7 @@ function flagAnimation() {
       })
     })
     document.querySelector("#hero3").addEventListener("mouseenter", function () {
-        gsap.to(".mousefollower", {
+        gsap.to("#crsr", {
             opacity: 0,
         })
       gsap.to("#flag", {
@@ -175,7 +180,7 @@ function flagAnimation() {
       })
     })
     document.querySelector("#hero3").addEventListener("mouseleave", function () {
-        gsap.to(".mousefollower", {
+        gsap.to("#crsr", {
             opacity: 1
         })
       gsap.to("#flag", {
@@ -222,7 +227,7 @@ function footerAnimation() {
     })
 }
 
-loadingAnimation();
+// loadingAnimation();
 cursorAnimation();
 locomotiveAnimation();
 sheryAnimation();
