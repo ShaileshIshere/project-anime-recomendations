@@ -175,6 +175,9 @@ html, body{
     transition: color .35s, -webkit-text-stroke-color .35s, -webkit-text-stroke-width .35s;
 }
 #hero3{
+    /* background-color: red; */
+    width: fit-content;
+    padding:  0 0.5rem;
     z-index: 999;
     position: relative;
 }
@@ -184,7 +187,7 @@ html, body{
     margin-left: 0.3vw;
     transition: all ease 0.3s;
 }
-.hero h2:hover{
+#hero3 h2:hover{
     -webkit-text-stroke: 0.15rem #fff;
     color: transparent;
     font-weight: 500;
@@ -195,8 +198,8 @@ html, body{
     background-color: #151515;
     height: 100vh;
     width: 100%;
-    padding-top: 2vh;
-    margin-top: 20vh;
+    padding-top: 1vh;
+    margin-top: 22vh;
     position: relative;
     z-index: 999;
 }
@@ -272,29 +275,58 @@ element.style {
     justify-content: flex-start;
     flex-wrap: wrap;
 }
-.image-div{
+/* .image-div{
+    display: block;
     height: 38vw;
     width: 26vw;
     margin: 2vw;
     flex-shrink: 0;
     overflow: hidden;
     position: relative;
+} */
+.image-div{
+    display: block;
+    height: 42vw;
+    width: 27vw;
+    margin: 2vw;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid white;
 }
-.image-div:nth-child(1) {
-    height: 28vw;
-    width: 22vw;
+.image-div .images{
+    /* background-color: red; */
+    height: 90%;
+    width: 100%;
 }
-#image3{
-    margin-top: 25vh;
-}
-.image-div img{
-    height: 70%;
+.images img{
+    height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: center;
 }
-.image-div h3{
+.image-div .about{
+    display: flex !important;
+    justify-content: space-between;
+    padding: 1vw 0.3vw;
+}
+.about h3{
+    text-transform: uppercase;
     font-size: 1rem;
+    font-weight: 500;
+}
+.image-div:nth-child(1) {
+    height: 36vw;
+    width: 23vw;
+}
+#image3{
+    margin-top: 25vh;
+}
+.images img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 #page3-circle1{
     height: 25vw;
@@ -305,7 +337,7 @@ element.style {
     align-items: center;
     justify-content: center;
     margin-top: 30vh;
-    margin-left: 12vw;
+    margin-left: 10vw;
     margin-right: 1vw;
     position: relative;
 }
@@ -320,11 +352,11 @@ element.style {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2vh;
-    margin-right: 7vw;
+    margin-top: 10vh;
+    margin-right: 6vw;
     margin-left: 1vw;
     position: relative;
-    transform: rotate(315deg);
+    /* transform: rotate(315deg); */
 }
 #page3-circle2 svg{
     height: 35%;
