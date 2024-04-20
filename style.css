@@ -437,7 +437,8 @@ element.style {
     display: flex;
 }
 #page4-flex img{
-    width: 48%;
+    width: 50%;
+    /* height: 70%; */
 }
 #page4-flex p{
     font-size: 1vw;
@@ -450,7 +451,7 @@ element.style {
     height: 90vh;
     padding: 5vw 3vw;
     position: relative;
-    margin-top: -35vh;
+    margin-top: -50vh;
     margin-left: 22vw;
 }
 .blue-div-elem{
