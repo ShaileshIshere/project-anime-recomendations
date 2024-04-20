@@ -72,14 +72,15 @@ function loadingAnimation() {
     timer.from("#main", {
         opacity: 1,
         y: 1200,
-        duration: 1,
-        ease: Power4
+        duration: 0.8,
+        ease: "expo.inout"
     });
     timer.to("#loader", {
         display: "none"
     });
     timer.from("#nav", {
         opacity: 0,
+        duration: 0.2
         // delay: 0.2
     });
     timer.from("#hero1 h1,#hero2 h1,#hero3 h2,#hero3 h1,#hero4 h1", {
@@ -239,4 +240,4 @@ cursorAnimation();
 locomotiveAnimation();
 sheryAnimation();
 flagAnimation();
-footerAnimation();
+// footerAnimation();

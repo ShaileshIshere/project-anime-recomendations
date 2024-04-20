@@ -590,3 +590,217 @@ footer{
     left: 0;
     transform: translate(-50%, -50%);
 }
+
+@media (width <= 600px) {
+
+    #loader {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 999999;
+        background-color: #030303;
+        padding: 25vh 2vw;
+        position: absolute;
+    }
+
+    .line {
+        height: fit-content;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        /* gap: 3vw; */
+        flex-direction: column;
+        position: relative;
+        top: 15%;
+    }
+
+    .line h1:nth-child(n){
+        line-height: 0.95;
+    }
+
+    #line3{
+        /* background-color: red; */
+        line-height: 7vw;
+        height: 20vw;
+    }
+
+    #line1-part1 {
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        gap: 1vw;
+    }
+
+    #line1-part1 h5,
+    #line1-part1 h6 {
+        font-size: 5vw;
+        font-weight: 100;
+        font-family: 'silk serif';
+    }
+
+    #line1-part1 h5 {
+        width: 5vw;
+        text-align: right;
+        margin-right: 1.5vw;
+    }
+
+    .line h1 {
+        font-size: 8.5vw;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    .line h2 {
+        /* background: red; */
+        font-size: 10vw;
+        text-transform: uppercase;
+        font-weight: 900;
+        opacity: 0;
+        /* margin-left: 0.1vw; */
+        /* animation-name: loaderAnim */
+        animation-duration: 2s;
+
+        /* display: none; */
+        animation-iteration-count: infinite;
+    }
+
+    #page1{
+        /* background-color: palegoldenrod; */
+        height: 60vh;
+        width: 100%;
+        background-color: #151515;
+        /* background-color: royalblue; */
+        position: relative;
+        z-index: 999;
+        overflow-y: hidden;
+    }
+    #page1 #nav {
+        display: flex;
+        /* display: block; */
+        align-items: center;
+        justify-content: space-between;
+        padding: 2.3vw 5.5vw;
+    }
+
+    #nav svg{
+        display: block;
+        position: relative;
+        top: 5vw;
+        left: 70vw;
+        position: fixed;
+        z-index: 999;
+    }
+    
+    #nav-part2 {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        gap: 3vw;
+    }
+    
+    #nav-part2 h4 {
+        font-size: 1vw;
+        font-weight: 500;
+    }
+    
+    .hero {
+        width: 72%;
+        margin-left: 5%;
+        height: fit-content;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 99999;
+    }
+    
+    .hero:nth-child(2) {
+        margin-top: 18vh;
+    }
+    
+    .hero h1 {
+        font-size: 10vw;
+        font-weight: 600;
+        text-transform: uppercase;
+        line-height: 10vw;
+        position: relative;
+    }
+    .hero h2{
+        color: transparent;
+        font-size: 10vw;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 10vw;
+        -webkit-text-stroke: 0.5px #fff;
+    }
+    #hero3{
+        /* background-color: red; */
+        width: fit-content;
+        /* padding:  0 0.5rem; */
+        z-index: 999;
+        position: relative;
+        padding-left: 0;
+    }
+    #hero3 h1{
+        position: relative;
+        top: -0.7vh;
+        margin-left: 0.5vw;
+        transition: all ease 0.3s;
+    }
+    /* #hero3 h2:hover{
+        -webkit-text-stroke: 0.15rem #fff;
+        color: transparent;
+        font-weight: 500;
+        border-bottom: 0.8vw solid transparent;
+    } */
+
+    #page2{
+        background-color: #151515;
+        height: 70vh;
+        width: 100%;
+        padding-top: 1vh;
+        margin-top: -5vw;
+        position: relative;
+        z-index: 999;
+    }
+    #video-container{
+        margin-top: 10vh;
+        height: 50vh;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+    }
+    #video-container video{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    #video-container img{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        top :0;
+    }
+    #video-cursor{
+        background-color: #FFA63D;
+        height: 25vw;
+        width: 25vw;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #video-cursor i{
+        font-size: 7vw;
+    }
+
+}
